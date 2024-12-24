@@ -1494,9 +1494,14 @@ footer .left-text-content p {
 }
 
 
-footer .team-company a{
+footer .team-company a {
 
-  color: #fff;
+  color: white;
+
+}
+footer .team-company a span{
+
+  color: rgb(31, 73, 128);
 
 }
 footer .right-text-content p {
