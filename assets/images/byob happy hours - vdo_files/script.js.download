@@ -1,0 +1,53 @@
+// Invert colors if #dark in the url
+if (document.location.hash.includes("dark")) {
+  // to debbug remove: dark
+  // Button primary
+  document.querySelectorAll(".ks-button--primary").forEach((elem) => {
+    elem.style.backgroundColor = "#7814f7"; // purple
+    elem.style.color = "white";
+
+    // Hover
+    elem.addEventListener("mouseover", function () {
+      this.style.backgroundColor = "white";
+      this.style.color = "black";
+    });
+
+    elem.addEventListener("mouseout", function () {
+      this.style.backgroundColor = "#7814f7";
+      this.style.color = "white";
+    });
+  });
+  // Button secondary
+  document.querySelectorAll(".ks-button--secondary").forEach((elem) => {
+    elem.style.color = "white";
+    elem.style.borderColor = "rgba(229, 229, 229, .25)";
+  });
+  // Background
+  document.body.style.backgroundColor = "#202124";
+  document.body.style.color = "white";
+}
+
+const resizeObserver = new ResizeObserver((entries) => {
+  if (entries.length > 0) {
+    parent.postMessage(
+      {
+        type: "content-height",
+        height: entries[0].contentRect.height,
+      },
+      "*"
+    );
+  }
+});
+
+const observePageWrapperSize = () => {
+  const pageWrapper = document.body.getElementsByClassName("page-wrapper")[0];
+  if (pageWrapper) {
+    resizeObserver.observe(pageWrapper);
+  }
+};
+
+if (document.readyState === "loading") {
+  window.addEventListener("load", observePageWrapperSize);
+} else {
+  observePageWrapperSize();
+}
