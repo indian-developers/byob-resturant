@@ -209,6 +209,7 @@ header
 
 .background-header {
   background-color: #fff;
+  
   height: 80px!important;
   position: fixed!important;
   top: 0px;
@@ -646,7 +647,7 @@ header
 banner
 --------------------------------------------- 
 */
-
+/* 
 #top {
   padding-top: 100px;
 }
@@ -657,7 +658,7 @@ banner
 }
 
 #top .left-content {
-  background-image: url(../images/top-left-bg.jpg);
+  background-image: url(../images/banner-byob.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -696,7 +697,7 @@ banner
 
 #top .left-content .main-white-button a {
   display: inline-block;
-}
+} */
 
 /* ==== Main CSS === */
 .img-fill{
@@ -1554,7 +1555,7 @@ responsive
 
 @media (max-width: 992px) {
   #top {
-    padding-top: 100px;
+    padding-top: 60px;
     height: auto;
   }
   .header-area .main-nav .nav li.submenu:after {
@@ -1740,4 +1741,99 @@ responsive
     border-right: 1px solid #454035;
     border-bottom: 1px solid #454035;
   }
+}
+
+
+
+
+
+
+.top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+
+}
+
+.top-banner img {
+  width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures the image does not exceed container width */
+  object-fit: cover; /* Ensures the image covers the container proportionally */
+}
+
+
+/* Container for buttons */
+.button-container {
+  display: flex;
+  gap: 20px; /* Spacing between buttons */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Base button styling */
+.styled-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px; /* Fully rounded corners */
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Initial shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(45deg, var(--start-color), var(--end-color)); /* Gradient colors */
+}
+
+.call-now {
+  --start-color: #28a745; /* Gradient start for green */
+  --end-color: #4caf50;  /* Gradient end for green */
+}
+
+.book-table {
+  --start-color: #dc3545; /* Gradient start for red */
+  --end-color: #ff5e57;  /* Gradient end for red */
+}
+
+/* Links inside buttons */
+.styled-button a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Text color */
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block; /* Ensures proper button alignment */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  text-align: center; /* Center align the text */
+}
+
+/* Hover effects */
+.styled-button:hover {
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+.styled-button:active {
+  transform: translateY(2px); /* Slight push down */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+}
+
+/* Vibrate animation */
+@keyframes vibrate {
+  0% { transform: translate(1px, 1px); }
+  25% { transform: translate(-1px, -1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, 1px); }
+  100% { transform: translate(1px, 1px); }
+}
+
+.styled-button.vibrate {
+  animation: vibrate 0.5s ease-in-out infinite;
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Vibrating shadow effect */
+}
+
+.styled-button.stop-vibrate {
+  animation: none; /* Stops vibration */
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4); /* Keep vibrant shadow */
+  transform: none; /* Maintain default state */
 }

@@ -103,11 +103,12 @@ https://templatemo.com/tm-558-klassy-cafe
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
-    <div id="top">
-        <div class="container-fluid">
-            <div class="row">
+   <div id="top">
+      <div class="container-fluid"> 
+         
+           <div class="row">
                 <div class="col-lg-4">
-                    <div class="left-content">
+                    <!-- <div class="left-content">
                         <div class="inner-content">
                             <h4>BYOB HAPPY HOURS</h4>
                             <h6>THE BEST EXPERIENCE</h6>
@@ -115,39 +116,71 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <a href="#reservation">Make A Reservation</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-8">
                     <div class="main-banner header-text">
                         <div class="Modern-Slider">
-                          <!-- Item -->
-                          <div class="item">
+                       
+                   <!-- <div class="item">
                             <div class="img-fill">
                                 <img src="assets/images/slide-01.jpg" alt="">
                             </div>
-                          </div>
+                          </div>  -->
                           <!-- // Item -->
                           <!-- Item -->
-                          <div class="item">
+                       <!-- <div class="item">
                             <div class="img-fill">
                                 <img src="assets/images/slide-02.jpg" alt="">
                             </div>
-                          </div>
+                          </div>  -->
                           <!-- // Item -->
                           <!-- Item -->
-                          <div class="item">
+                         <!-- <div class="item">
                             <div class="img-fill">
                                 <img src="assets/images/slide-03.jpg" alt="">
                             </div>
-                          </div>
+                          </div>  -->
                           <!-- // Item -->
-                        </div>
-                    </div>
+                      </div>
+                    </div> 
                 </div>
-            </div>
+         </div>  
+
+
+
+
+
+            
+        </div> 
+
+        <div class="top-banner">
+            <img src="assets/images/banner-byob.png" alt="">
+
         </div>
+
+
+
     </div>
     <!-- ***** Main Banner Area End ***** -->
+
+
+
+
+    <div class="button-container">
+        <button class="styled-button call-now">
+          <a href="tel:+919069031952">Call Now</a>
+        </button>
+        <button class="styled-button book-table">
+          <a href="#contact">Book Table</a>
+        </button>
+      </div>
+      
+      
+
+
+
+
 
     <!-- ***** About Area Starts ***** -->
     <section class="section" id="about">
@@ -965,6 +998,26 @@ https://templatemo.com/tm-558-klassy-cafe
       // Redirect to WhatsApp
       window.open(whatsappURL, '_blank');
     }
+  </script>
+  <script>
+window.addEventListener('load', () => {
+  const buttons = document.querySelectorAll('.styled-button');
+
+  // Start vibrating animation
+  buttons.forEach(button => {
+    button.classList.add('vibrate');
+  });
+
+  // Stop vibrating animation after 4 seconds
+  setTimeout(() => {
+    buttons.forEach(button => {
+      button.classList.remove('vibrate'); // Stop the animation
+      button.classList.add('stop-vibrate'); // Maintain the same vibrant design
+    });
+  }, 4000);
+});
+
+
   </script>
   </body>
 </html>
