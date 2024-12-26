@@ -1794,6 +1794,10 @@ responsive
   --start-color: #dc3545; /* Gradient start for red */
   --end-color: #ff5e57;  /* Gradient end for red */
 }
+.direction {
+  --start-color: blue; /* Gradient start for red */
+  --end-color: rgb(167, 52, 142);  /* Gradient end for red */
+}
 
 /* Links inside buttons */
 .styled-button a {
